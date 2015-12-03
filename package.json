@@ -1,0 +1,23 @@
+{
+  "name": "galossary",
+  "version": "1.0.0",
+  "description": "GA WDI links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starrchen/project-3.git"
+  },
+  "author": "Alex, Starr and Alice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starrchen/project-3/issues"
+  },
+  "homepage": "https://github.com/starrchen/project-3#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "hbs": "^4.0.0"
+  }
+}
