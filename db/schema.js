@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/project-3");
+mongoose.connect("mongodb://localhost/tunr");
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId;
@@ -7,26 +7,26 @@ var ObjectId = Schema.Types.ObjectId;
 var TopicSchema = new Schema(
   {
     name: String,
-    summary: String,
-    image: String,
+    description: String,
+    imageUrl: String,
     links: [{type: ObjectId, ref: "Link"}]
   },
   {
-
+    toObject: {virtuals: true},
+    toJSON: {virtuals: true}
   }
 );
 
-var LinkSchema = new Schema{
-  {
-    name: String,
-    url: String,
-    description: String,
-    topic: [{type: ObjectId, ref: "Topic"}]
-  },
-  {
+TopicSchema.virtual("id").get(function(){
+  return this._id;
+});
 
-  }
-};
+var LinkSchema = new Schema({
+  title: String,
+  summary: String,
+  url: String,
+  topic: {type: ObjectId, ref: "Topic"}
+});
 
 var TopicModel = mongoose.model("Topic", TopicSchema);
-var LinkModel = mongodb.model("Link", LinkSchema);
+var LinkModel = mongoose.model("Link", LinkSchema);
