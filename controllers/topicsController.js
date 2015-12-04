@@ -8,15 +8,18 @@ var topicsController = {
     });
   },
   new: function(req, res){
-      res.render("topics/new")
+      res.render("topics/new");
     },
   create: function(req, res){
-    var topic = new TopicModel({name: req.body.name})
+    var topic = new TopicModel({name: req.body.name,
+    description: req.body.description,
+    imageUrl: req.body.imageUrl
+  });
     topic.save(function(err){
       if (!err){
-        res.redirect("topics")
+        res.redirect("topics");
       }
-    })
+    });
   },
   show: function(req, res){
     var id = req.params.id;

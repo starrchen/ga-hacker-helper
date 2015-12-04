@@ -19,7 +19,7 @@ var LinkSchema = new Schema({
 var TopicSchema = new Schema({
   name: String,
   description: String,
-  image_url: String,
+  imageUrl: String,
   links: [LinkSchema]
 });
 
