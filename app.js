@@ -16,15 +16,13 @@ app.listen(4000, function(){
  console.log("app listening on port 4000");
 });
 
-app.get("/", function(req, res){
-  res.render('topics/index');
-});
+
 
 
 // loads module containing all link and topic controller actions. not defined yet...
 var topicsController = require("./controllers/topicsController");
 var linksController = require("./controllers/linksController");
-// connect mongoose interfaces to reminders mongo db
+
 
 
 
@@ -38,5 +36,6 @@ app.use(methodOverride('_method'));
 
 
 
-// first route we'll define together ...
-// app.get("/authors", authorsController.index)
+// routes
+app.get("/topics", topicsController.index);
+app.get("/topics/:id", topicsController.show);
