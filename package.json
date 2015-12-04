@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ascreven/project-3#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "hbs": "^4.0.0"
   }
 }
