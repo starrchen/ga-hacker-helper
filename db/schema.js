@@ -10,8 +10,8 @@ var LinkSchema = new Schema({
   title: String,
   summary: String,
   url: String,
-  source: String,
-  topics: [TopicSchema]
+  source: String
+  // topic: [TopicSchema]
   // topic_id: foreign_key
 });
 

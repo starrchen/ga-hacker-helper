@@ -21,8 +21,9 @@ app.get("/", function(req, res){
 });
 
 
-// loads module containing all authors contrller actions. not defined yet...
-// var authorsController = require("./controllers/authorsController")
+// loads module containing all link and topic controller actions. not defined yet...
+var topicsController = require("./controllers/topicsController");
+var linksController = require("./controllers/linksController");
 // connect mongoose interfaces to reminders mongo db
 
 
