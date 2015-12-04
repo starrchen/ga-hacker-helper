@@ -1,1 +1,11 @@
-<h1>Hi</h1>
+
+<a href="/topics/new">New Topic</a>
+{{#each topic}}
+  <div class="topic">
+    <div class="topicName"><a href="/topics/{{_id}}">{{topic.name}}</a></div>
+    <!-- {{#each reminders}} -->
+      <!-- <p class="reminder">{{body}}</p> -->
+    <!-- {{/each}} -->
+    <!-- <br> -->
+  </div>
+{{/each}}
