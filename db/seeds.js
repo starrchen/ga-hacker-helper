@@ -32,28 +32,26 @@ var lol = new TopicModel({
 var powermode = new LinkModel({
     title: "Power Mode",
     summary: "Make every keystroke feel awesome!",
-    url: "https://atom.io/packages/activate-power-mode",
-    topic: atom,
+    url: "https://atom.io/packages/activate-power-mode"
 });
 
 var techQs = ({
   title: "Technical Questions",
   summary: "List of questions/question topics a Redditor had at tech interviews",
-  url: "https://www.reddit.com/r/webdev/comments/3f7q3q/been_interviewing_with_a_lot_of_tech_startups_as/",
-  topic: jobs
+  url: "https://www.reddit.com/r/webdev/comments/3f7q3q/been_interviewing_with_a_lot_of_tech_startups_as/"
 });
 
 var pokedata = ({
   title: "Pokemon or Big Data?",
   summary: "A game that tests if you know the difference between Pokemon names and Big Data terms",
-  url: "http://pixelastic.github.io/pokemonorbigdata/",
-  topic: lol
+  url: "http://pixelastic.github.io/pokemonorbigdata/"
 });
 
 var topics = [atom, jobs, lol];
 var links = [powermode, techQs, pokedata];
 
 for(var i = 0; i < topics.length; i++){
+  topics[i].links.push(links[i]);
   topics[i].save(function(err){
     if (err){
       console.log(err);
