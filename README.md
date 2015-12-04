@@ -8,3 +8,6 @@ Enter GA-Lossary. View all helpful links in one place, organized by topic. Submi
 
 :100:
 :books:
+
+
+geting set up:  npm install ande then node db/seeds
