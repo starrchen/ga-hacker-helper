@@ -26,9 +26,16 @@ h5.header {
 h1.header {
   color: white;
 }
-.card-title {
+#topicName{
   color: black;
+  display: inline-block;
 }
 body {
   background-color: tomato;
 }
+.card-image {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+}
+ 

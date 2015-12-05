@@ -13,7 +13,7 @@ LinkModel.remove({}, function(err){
 
 var atom = new TopicModel({
   name: "Atom Packages",
-  description: "",
+  description: "Tricks for using the Atom text editor.",
   imageUrl: "images/atom.png"
 });
 
@@ -22,12 +22,12 @@ var jobs = new TopicModel({
   description: "Interview tips, resume building resources, open positions, and more",
   imageUrl: "images/hireme.png"
 });
-
-var lol = new TopicModel({
-  name: "For the Lulz",
-  description: "",
-  imageUrl: "images/lol.png"
-});
+//
+// var lol = new TopicModel({
+//   name: "For the Lulz",
+//   description: "",
+//   imageUrl: "images/lol.png"
+// });
 
 var powermode = new LinkModel({
     title: "Power Mode",
@@ -47,7 +47,8 @@ var pokedata = ({
   url: "http://pixelastic.github.io/pokemonorbigdata/"
 });
 
-var topics = [atom, jobs, lol];
+// var topics = [atom, jobs, lol];
+var topics = [atom, jobs];
 var links = [powermode, techQs, pokedata];
 
 for(var i = 0; i < topics.length; i++){
