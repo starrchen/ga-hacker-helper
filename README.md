@@ -9,5 +9,10 @@ Enter GA-Lossary. View all helpful links in one place, organized by topic. Submi
 :100:
 :books:
 
-npm install
-node db/seeds
+## Installation
+Clone down this repository.
+
+```bash
+$ npm install
+$ node db/seeds.js
+```
