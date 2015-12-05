@@ -36,6 +36,12 @@ var topicsController = {
     TopicModel.findByIdAndRemove(id, function(err, doc) {
       res.redirect("/topics");
     });
+  },
+  delete: function(req, res){
+    var id = req.params.id;
+    TopicModel.findByIdAndRemove(id, function(err, doc){
+      res.redirect("/topics");
+    });
   }
 };
 module.exports = topicsController;
