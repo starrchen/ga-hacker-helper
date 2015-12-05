@@ -1,7 +1,31 @@
 
-<div class="row center">
-  <a href="/topics/new" id="download-button" class="btn-large waves-effect waves-light lighten-1">New Topic</a>
-</div>
+
+<ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+      <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="#!">First</a></li>
+              <li><a href="#!">Second</a></li>
+              <li><a href="#!">Third</a></li>
+              <li><a href="#!">Fourth</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+
+
+  <div class="row center">
+    <a href="/topics/new" id="download-button" class="btn-large waves-effect waves-light lighten-1">New Topic</a>
+  </div>
+
 {{#each topics}}
   <div class='container' id='topicContainer'>
       <div class="row">
@@ -26,4 +50,6 @@
     <!-- {{/each}} -->
     <!-- <br> -->
   </div>
+
+
 {{/each}}

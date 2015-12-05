@@ -37,5 +37,9 @@ body {
   width: 100px;
   height: auto;
   display: inline-block;
+ }
+
+.mdi-navigation-menu {
+  font-size: 4rem;
+  padding-left: 10px;
 }
- 
