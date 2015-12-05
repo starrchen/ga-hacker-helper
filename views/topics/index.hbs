@@ -1,11 +1,28 @@
 
-<a href="/topics/new">New Topic</a>
+<div class="row center">
+  <a href="/topics/new" id="download-button" class="btn-large waves-effect waves-light lighten-1">New Topic</a>
+</div>
 {{#each topics}}
-  <div class="topic">
-    <div class="topicName"><a href="/topics/{{_id}}">{{name}}</a></div>
+
+      <div class="row">
+           <div class="col s12 m7">
+             <div class="card">
+               <div class="card-image">
+                 <img src="images/{{imageUrl}}">
+                 <span class="card-title">{{name}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{description}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/topics/{{_id}}">Learn More</a></div>
+            </div>
+          </div>
+        </div>
+
     <!-- {{#each reminders}} -->
       <!-- <p class="reminder">{{body}}</p> -->
     <!-- {{/each}} -->
     <!-- <br> -->
-  </div>
+
 {{/each}}

@@ -21,10 +21,18 @@ var topicsController = {
       }
     });
   },
+
   show: function(req, res){
     var id = req.params.id;
     TopicModel.findById(id, function(err, doc){
       res.render("topics/show", {topic: doc});
+    });
+  },
+
+  update: function(req, res){
+    var id = req.params.id;
+    TopicModel.findById(id, function(err, doc){
+      res.render("topics/edit", {topic: doc});
     });
   }
 };

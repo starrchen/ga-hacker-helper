@@ -19,7 +19,7 @@ var atom = new TopicModel({
 
 var jobs = new TopicModel({
   name: "Jobs/Interviews",
-  description: "",
+  description: "Interview tips, resume building resources, open positions, and more",
   imageUrl: "images/hireme.png"
 });
 
