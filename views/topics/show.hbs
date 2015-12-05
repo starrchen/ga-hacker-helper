@@ -1,5 +1,6 @@
 <h1> {{topic.name}} </h1>
 <p> {{topic.description}} </p>
+<button type="button">edit topic</button>
 <form method="post" action="/topics/{{topic.id}}?_method=delete">
   <input type="submit" value="delete topic">
 </form>
