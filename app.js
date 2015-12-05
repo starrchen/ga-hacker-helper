@@ -37,6 +37,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
 // routes
+app.get("/", topicsController.index)
 app.get("/topics", topicsController.index)
 app.get("/topics/new", topicsController.new)
 app.post("/topics", topicsController.create)
