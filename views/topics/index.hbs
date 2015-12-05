@@ -1,55 +1,53 @@
 
 
 <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-      <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First</a></li>
-              <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+  <li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+      <li>
+        <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="#!">First</a></li>
+            <li><a href="#!">Second</a></li>
+            <li><a href="#!">Third</a></li>
+            <li><a href="#!">Fourth</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
 
 
-  <div class="row center">
-    <a href="/topics/new" id="download-button" class="btn-large waves-effect waves-light lighten-1">New Topic</a>
-  </div>
+<div class="row center">
+  <a href="/topics/new" id="download-button" class="btn-large hoverable waves-effect waves-light lighten-1">New Topic</a>
+</div>
 
-{{#each topics}}
-  <div class='container' id='topicContainer'>
-      <div class="row">
-           <div class="col s12 m7">
-             <div class="card small">
-               <div class="card-image">
-                 <img src="{{imageUrl}}">
 
-            </div>
-            <h5 class="card-title" id='topicName'>{{name}}</h5>
-            <div class="card-content">
-              <p>{{description}}</p>
-            </div>
-            <div class="card-action">
-              <a href="/topics/{{_id}}">Learn More</a></div>
-            </div>
-          </div>
+<div class='container' id='topicContainer'>
+  <div class="row">
+  {{#each topics}}
+    <div class="col s12 m6">
+      <div class="card small" id='topicCard'>
+        <div id='color-one'>
+        <div class="card-image">
+          <img src="{{imageUrl}}">
+
         </div>
 
-    <!-- {{#each reminders}} -->
-      <!-- <p class="reminder">{{body}}</p> -->
-    <!-- {{/each}} -->
-    <!-- <br> -->
+          <div class='topic-description'>
+            <h5 class="card-title center-align" id='topicName'>{{name}}</h5>
+          <p class='center-align' id='topicDescription'>{{description}}</p>
+
+      </div>
+      </div>
+        <div class="card-action hoverable" id='learn-more'>
+          <a class='white-text' href="/topics/{{_id}}">Learn More</a></div>
+        </div>
+      </div>
+  {{/each}}
   </div>
-
-
-{{/each}}
+</div>
