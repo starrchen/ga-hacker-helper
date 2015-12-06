@@ -23,7 +23,6 @@ body {
 #index-banner {
   background-image: url("../images/headerImage.jpg");
   height: 5%;
-  margin-bottom: 20px;
 }
 
 h5.header {
@@ -34,7 +33,9 @@ h1.header {
   color: white;
 }
 
-
+.nav-wrapper {
+  background-color: #503D43;
+}
 .mdi-navigation-menu {
   font-size: 4rem;
   padding-left: 10px;
@@ -53,6 +54,7 @@ h1.header {
   background-color: #503D43;
   position: relative;
   max-height: 300px;
+
 }
 
 #color-one{
