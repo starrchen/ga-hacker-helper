@@ -94,3 +94,12 @@ h1.header {
 .validate {
    color: #000;
  }
+
+ .input-field input[type=text]:focus + label {
+    color: #0E7C3A;
+  }
+
+  .input-field input[type=text]:focus {
+  border-bottom: 1px solid #0E7C3A;
+  box-shadow: 0 1px 0 0 #0E7C3A;
+}
