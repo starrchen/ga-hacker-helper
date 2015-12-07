@@ -60,6 +60,9 @@ app.get("/topics/:id.:format?", topicsController.show)
 app.get("/tppics/:id/edit.:format?", topicsController.edit)
 app.delete("/topics/:id.:format?", topicsController.delete)
 
+var routes = require('./config/routes');
+app.use(routes);
+
 //serve to localhost
 app.listen(4000, function(){
  console.log("app listening on port 4000");
