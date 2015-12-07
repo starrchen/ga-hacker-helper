@@ -1,22 +1,20 @@
-//express
-var express = require('express');
-var app = express();
+var express         = require('express');
+var app             = express();
+var mongoose        = require('mongoose');
+var passport        = require('passport');
+var flash           = require('connect-flash');
+var hbs             = require("hbs");
+var morgan          = require('morgan');
+var cookieParser    = require('cookie-parser');
+var bodyParser      = require('body-parser'); // loads dependency for middleware for parameters
+var session         = require('express-session');
+var methodOverride  = require('method-override') // loads dependency that allows put and delete where not supported in html
 
 //connecting to database
-var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/project_3_db');
 
-// loads dependency for middleware for paramters
-var bodyParser = require('body-parser');
-
-// loads dependency that allows put and delete where not supported in html
-var methodOverride = require('method-override');
-
-//hbs
-var hbs = require('hbs');
 // sets view engine to handlebars
 app.set('view engine', 'hbs');
-// connects assets like stylesheets
 
 //public folder
 app.use(express.static(__dirname + '/public'));
@@ -33,6 +31,24 @@ app.use(methodOverride('_method'));
 app.use("*.json", function(req, res, next){
   req.headers.accept = "application/json";
   next()
+});
+
+app.use(morgan('dev'));
+app.use(cookieParser());
+app.use(bodyParser());
+
+app.use(session({ secret: 'PROJECT-3' }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+var config = require('./config/passport')
+config(passport);
+
+// custom middleware
+app.use(function(req, res, next){
+  res.locals.currentUser = req.user;
+  next();
 });
 
 // routes
