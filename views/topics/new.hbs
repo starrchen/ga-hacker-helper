@@ -1,14 +1,36 @@
 <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-<h2>Create New Topic</h2>
-<form action="/topics" method="post">
+<h2 class='center' id='new-topic-header'>Create New Topic</h2>
+<div class="row">
 
-<input type="text" name="name">
-<label>Name:</label>
+<form action="/topics" method="post" class='col s12'>
+  <div class='section input-field'>
+<input type="text" name="name" class="validate">
+<label>Topic Name:</label>
 
-<input type="text" name="description">
+
+</div>
+<div class='section input-field'>
 <label>Description:</label>
-<input type="text" name="imageUrl">
+
+<textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+
+
+</div>
+
+<form action="#">
 <label>Image URL:</label>
+<div class="file-field input-field">
+
+<div class="btn">
+<span>File</span>
+<input type="file" name="imageUrl"></div>
+<div class="file-path-wrapper">
+<input class="file-path validate" type="text"></div>
+</div>
+
+</form>
+
 
 <input type="submit">
 </form>
+</div>
