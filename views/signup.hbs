@@ -1,0 +1,19 @@
+<h2>Signup</h2>
+
+{{#if message}}
+  <div>{{message}}</div>
+{{/if}}
+
+<form method="post" action="/signup">
+  <div>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email">
+  </div>
+
+  <div class>
+    <label for="email">Password</label>
+    <input type="password" name="password" id="password">
+  </div>
+
+  <input type="submit">
+</form>
