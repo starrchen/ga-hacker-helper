@@ -1,19 +1,24 @@
-<h2>Login</h2>
 
+<h2 class='center' id='new-topic-header'>Login</h2>
 {{#if message.length}}
   <div>{{message}}</div>
 {{/if}}
-
-<form method="post" action="/login">
-  <div>
+<div class="row">
+<form method="post" action="/login" class='col s12'>
+    <div class='section input-field'>
+      <input type="text" name="email" id="email" class="validate">
     <label for="email">Email</label>
-    <input type="text" name="email" id="email">
   </div>
 
-  <div>
+    <div class='section input-field'>
+
+    <input type="text" name="password" id="password" class="validate">
     <label for="email">Password</label>
-    <input type="password" name="password" id="password">
   </div>
-
-  <input type="submit">
+  <div class='center'>
+  <button class="btn submit waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
 </form>
+</div>
