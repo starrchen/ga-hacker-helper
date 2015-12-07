@@ -42,15 +42,6 @@ var topicsController = {
     });
   },
 
-  edit: function(req, res){
-    var id = req.params.id;
-    TopicModel.findbyId(id, function(err, doc){
-      res.render("topics/edit", {
-        topic: doc
-      });
-    });
-  },
-
   delete: function(req, res){
     var id = req.params.id;
     TopicModel.findByIdAndRemove(id, function(err, doc){
@@ -69,7 +60,7 @@ var topicsController = {
         res.redirect("/topics");
       })
   },
-  
+
     edit: function(req,res){
        TopicModel.findById(req.params.id, function(err, doc){
          res.render("topics/edit", {topic: doc})
