@@ -21,11 +21,6 @@ app.set('view engine', 'hbs');
 //public folder
 app.use(express.static(__dirname + '/public'));
 
-//serve to localhost
-app.listen(4000, function(){
- console.log("app listening on port 4000");
-});
-
 // loads module containing all link and topic controller actions. not defined yet...
 var topicsController = require("./controllers/topicsController");
 var linksController = require("./controllers/linksController");
@@ -35,12 +30,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 // allows for put/delete request in html form
 app.use(methodOverride('_method'));
+app.use("*.json", function(req, res, next){
+  req.headers.accept = "application/json";
+  next()
+});
 
 // routes
-app.get("/", topicsController.index)
-app.get("/topics", topicsController.index)
-app.get("/topics/new", topicsController.new)
-app.post("/topics", topicsController.create)
-app.get("/topics/:id", topicsController.show)
-app.get("/tppics/:id/edit", topicsController.edit)
-app.delete("/topics/:id", topicsController.delete)
+app.get("/.:format?", topicsController.index)
+app.get("/topics.:format?", topicsController.index)
+app.get("/topics/new.:format?", topicsController.new)
+app.post("/topics.:format?", topicsController.create)
+app.get("/topics/:id.:format?", topicsController.show)
+app.get("/tppics/:id/edit.:format?", topicsController.edit)
+app.delete("/topics/:id.:format?", topicsController.delete)
+
+//serve to localhost
+app.listen(4000, function(){
+ console.log("app listening on port 4000");
+});

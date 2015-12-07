@@ -5,8 +5,14 @@ var topicsController = {
 
   index: function(req, res) {
     TopicModel.find({}, function(err, docs){
-      res.render("topics/index", {topics: docs});
-
+      res.format({
+        html: function(){
+          res.render("topics/index", {topics: docs});
+        },
+        json: function(){
+          res.json("topics/index", {topics: docs});
+        }
+      });
     });
   },
 
@@ -44,7 +50,7 @@ var topicsController = {
       });
     });
   },
-  
+
   delete: function(req, res){
     var id = req.params.id;
     TopicModel.findByIdAndRemove(id, function(err, doc){
