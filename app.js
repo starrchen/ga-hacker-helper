@@ -41,8 +41,10 @@ app.get("/topics.:format?", topicsController.index)
 app.get("/topics/new.:format?", topicsController.new)
 app.post("/topics.:format?", topicsController.create)
 app.get("/topics/:id.:format?", topicsController.show)
-app.get("/tppics/:id/edit.:format?", topicsController.edit)
 app.delete("/topics/:id.:format?", topicsController.delete)
+app.get("/topics/:id/edit", topicsController.edit);
+
+app.put("/topics/:id.:format?", topicsController.update);
 
 //serve to localhost
 app.listen(4000, function(){

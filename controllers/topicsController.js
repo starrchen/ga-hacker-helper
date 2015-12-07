@@ -58,12 +58,25 @@ var topicsController = {
       res.redirect("/topics");
     });
   },
+  
+  edit: function(req,res){
+     TopicModel.findById(req.params.id, function(err, doc){
+       res.render("topics/edit", {topic: doc})
+     })
+   },
 
-  update: function(req, res){
-    var id = req.params.id;
-    TopicModel.findById(id, function(err, doc){
-      res.render("topics/edit", {topic: doc});
-    });
-  }
+  update: function(req, res) {
+      var id = parseInt(req.params.id);
+      Topic.all()[id] = req.body.topic;
+
+      res.format({
+        html: function(){
+          res.redirect("/topics" + id);
+        },
+        json: function(){
+          res.json(Topic.find(id));
+        }
+      });
+    }
 };
 module.exports = topicsController;
