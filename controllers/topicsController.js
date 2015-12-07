@@ -52,7 +52,6 @@ var topicsController = {
   },
 
   delete: function(req, res){
-
     var id = req.params.id;
     TopicModel.findByIdAndRemove(id, function(err, doc){
       res.redirect("/topics");
@@ -60,18 +59,17 @@ var topicsController = {
   },
 
   update: function(req, res) {
-      var id = parseInt(req.params.id);
-      Topic.all()[id] = req.body.topic;
-
-      res.format({
-        html: function(){
-          res.redirect("/topics" + id);
-        },
-        json: function(){
-          res.json(Topic.find(id));
-        }
-      });
-    },
+    var id = req.params.id;
+    console.log (id)
+    TopicModel.findByIdAndUpdate(id, {
+        name: req.body.name,
+        description: req.body.description,
+        imageUrl: req.body.imageUrl
+      }).then(function(doc) {
+        res.redirect("/topics");
+      })
+  },
+  
     edit: function(req,res){
        TopicModel.findById(req.params.id, function(err, doc){
          res.render("topics/edit", {topic: doc})
