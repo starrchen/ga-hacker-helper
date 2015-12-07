@@ -1,1 +1,10 @@
 <h1>edit</h1>
+<form method="post" action="/topics/{{id}}?_method=put">
+  <label>Name:</label>
+  <input type="text" name="name" value="{{name}}">
+  <label>Description:</label>
+  <input type="text" name="description" value="{{description}}">
+  <label>Image URL:</label>
+  <input type="text" name="imageUrl" value="{{imageUrl}}">
+  <input type="submit" value="Edit Topic">
+</form>
