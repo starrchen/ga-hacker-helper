@@ -1,7 +1,7 @@
-<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"></link>
 
-<h1>edit</h1>
-<form method="post" action="/topics/{{id}}?_method=put">
+<h1>Edit</h1>
+<form method="put" action="/topics/{{id}}?_method=put">
   <label>Name:</label>
   <input type="text" name="name" value="{{name}}">
   <label>Description:</label>

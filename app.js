@@ -43,7 +43,6 @@ app.post("/topics.:format?", topicsController.create)
 app.get("/topics/:id.:format?", topicsController.show)
 app.delete("/topics/:id.:format?", topicsController.delete)
 app.get("/topics/:id/edit", topicsController.edit);
-
 app.put("/topics/:id.:format?", topicsController.update);
 
 //serve to localhost

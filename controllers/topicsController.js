@@ -58,12 +58,6 @@ var topicsController = {
       res.redirect("/topics");
     });
   },
-  
-  edit: function(req,res){
-     TopicModel.findById(req.params.id, function(err, doc){
-       res.render("topics/edit", {topic: doc})
-     })
-   },
 
   update: function(req, res) {
       var id = parseInt(req.params.id);
@@ -77,6 +71,11 @@ var topicsController = {
           res.json(Topic.find(id));
         }
       });
-    }
+    },
+    edit: function(req,res){
+       TopicModel.findById(req.params.id, function(err, doc){
+         res.render("topics/edit", {topic: doc})
+       })
+     }
 };
 module.exports = topicsController;
