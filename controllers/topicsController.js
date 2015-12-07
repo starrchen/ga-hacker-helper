@@ -53,3 +53,15 @@ var topicsController = {
   }
 };
 module.exports = topicsController;
+  // edit: function(req, res){
+  //   res.render('topics/edit.hbs', {
+  //     id: req.params.id,
+  //     topic: Topic.find([req.params.id])
+  //   });
+  // },
+  // update: function(req, res) {
+  //   var id = parseInt(req.params.id);
+  //   var updatedTopic = Topic.find(id)
+  //   updatedTopic = req.body.topic;
+  //   res.redirect("/topics/" + id)
+  // }
