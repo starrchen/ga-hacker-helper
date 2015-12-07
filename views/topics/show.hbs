@@ -1,4 +1,3 @@
-<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 <h1> {{topic.name}} </h1>
 <p> {{topic.description}} </p>
 
@@ -8,7 +7,11 @@
   <input type="submit" value="delete topic">
 </form>
 
-
+<a href="/topics/{{_id}}/links">add new link</a>
 {{#each topic.links}}
   <a href="{{url}}"><p>{{url}}</p></a>
+  <a href="">Edit</a>
+  <form method="post" action="/topics/{{topic.id}}/links/{{link.id}}?_method=delete">
+    <input type="submit" value="delete link">
+  </form>
 {{/each}}

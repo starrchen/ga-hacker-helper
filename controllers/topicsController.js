@@ -52,18 +52,28 @@ var topicsController = {
   },
 
   delete: function(req, res){
-
     var id = req.params.id;
     TopicModel.findByIdAndRemove(id, function(err, doc){
       res.redirect("/topics");
     });
   },
 
-  update: function(req, res){
+  update: function(req, res) {
     var id = req.params.id;
-    TopicModel.findById(id, function(err, doc){
-      res.render("topics/edit", {topic: doc});
-    });
-  }
+    console.log (id)
+    TopicModel.findByIdAndUpdate(id, {
+        name: req.body.name,
+        description: req.body.description,
+        imageUrl: req.body.imageUrl
+      }).then(function(doc) {
+        res.redirect("/topics");
+      })
+  },
+  
+    edit: function(req,res){
+       TopicModel.findById(req.params.id, function(err, doc){
+         res.render("topics/edit", {topic: doc})
+       })
+     }
 };
 module.exports = topicsController;
