@@ -102,19 +102,8 @@ var topicsController = {
     },
 
     ajax: function(req, res) {
-      TopicModel.find({}, function(err, docs) {
-        res.format({
-          html: function() {
-            res.render("topics/ajax", {
-              topics: docs
-            });
-          },
-          json: function() {
-            res.json("topics/ajax", {
-              topics: docs
-            });
-          }
-        });
+      TopicModel.find({}).populate("links").then(function(topics){
+        res.json(topics);
       });
     }
   };
