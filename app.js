@@ -51,7 +51,8 @@ app.use(function(req, res, next){
   next();
 });
 
-// routes
+// Topic routes
+
 app.get("/.:format?", topicsController.index)
 app.get("/topics.:format?", topicsController.index)
 app.get("/topics/new.:format?", topicsController.new)
@@ -64,6 +65,12 @@ app.get("/topics/:id/edit", topicsController.edit)
 
 var routes = require('./config/routes');
 app.use(routes);
+
+
+// Link routes
+app.post("/topics/:id/links", topicsController.addlink)
+app.delete("/topics/:topicId/links/:id", topicsController.removelink)
+
 
 //serve to localhost
 app.listen(4000, function(){
