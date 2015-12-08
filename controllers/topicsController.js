@@ -73,29 +73,32 @@ var topicsController = {
     })
   },
   addlink: function(req, res) {
-    TopicModel.findById(req.params.id, function(err, docs) {
-      docs.links.push(new LinkModel({
-        body: req.body.body
-      }))
-      docs.save(function(err) {
+      TopicModel.findById(req.params.id, function(err, docs) {
+        docs.links.push(new LinkModel({
+          url: req.body.url,
+          title: req.body.title,
+          summary: req.body.summary,
+          source: req.body.source
+        }))
+        docs.save(function(err) {
+          if (!err) {
+            res.redirect("/topics/" + req.params.id)
+          }
+        })
+      })
+    },
+    removelink: function(req, res) {
+      TopicModel.findByIdAndUpdate(req.params.topicId, {
+        $pull: {
+          reminders: {
+            _id: req.params.id
+          }
+        }
+      }, function(err, docs) {
         if (!err) {
-          res.redirect("/topics/" + req.params.id)
+          res.redirect("/topics/" + req.params.topicId)
         }
       })
-    })
-  },
-  removelink: function(req, res) {
-    TopicModel.findByIdAndUpdate(req.params.topicId, {
-      $pull: {
-        reminders: {
-          _id: req.params.id
-        }
-      }
-    }, function(err, docs) {
-      if (!err) {
-        res.redirect("/topics/" + req.params.topicId)
-      }
-    })
-  }
-};
-module.exports = topicsController;
+    }
+  };
+  module.exports = topicsController;
