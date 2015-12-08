@@ -51,13 +51,10 @@ app.use(function(req, res, next){
   next();
 });
 
-// Topic routes
+// routes
 var routes = require('./config/routes');
 app.use(routes);
 
-// Link routes
-app.post("/topics/:id/links", topicsController.addlink)
-app.delete("/topics/:topicId/links/:id", topicsController.removelink)
 
 
 //serve to localhost
