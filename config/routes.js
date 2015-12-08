@@ -23,4 +23,13 @@ router.route('/login')
 router.route("/logout")
   .get(usersController.getLogout)
 
+router.get("/.:format?", topicsController.index)
+router.get("/topics.:format?", topicsController.index)
+router.get("/topics/new.:format?", topicsController.new)
+router.post("/topics.:format?", topicsController.create)
+router.get("/topics/:id.:format?", topicsController.show)
+router.delete("/topics/:id.:format?", topicsController.delete)
+router.put("/topics/:id.:format?", topicsController.update)
+router.get("/topics/:id/edit", topicsController.edit)
+
 module.exports = router

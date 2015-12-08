@@ -8,10 +8,10 @@
 </form>
 <!-- links -->
 {{#each topic.links}}
-  <a href="{{url}}"><p>{{url}}</p></a>,<p>{{summary}}</p>
-  <form method="post" action="/topics/{{../topic._id}}/links/{{_id}}?_method=delete">
-          <input type="submit" value="Delete This Link">
-      </form>
+<a href="{{url}}"><p>{{url}}</p></a>,<p>{{summary}}</p>
+<form method="post" action="/topics/{{../topic._id}}/links/{{_id}}?_method=delete">
+  <input type="submit" value="Delete This Link">
+</form>
 {{/each}}
 
 <!-- add link -->

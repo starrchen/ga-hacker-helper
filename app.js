@@ -52,20 +52,8 @@ app.use(function(req, res, next){
 });
 
 // Topic routes
-
-app.get("/.:format?", topicsController.index)
-app.get("/topics.:format?", topicsController.index)
-app.get("/topics/new.:format?", topicsController.new)
-app.post("/topics.:format?", topicsController.create)
-app.get("/topics/:id.:format?", topicsController.show)
-app.delete("/topics/:id.:format?", topicsController.delete)
-app.put("/topics/:id.:format?", topicsController.update)
-app.get("/topics/:id/edit", topicsController.edit)
-
-
 var routes = require('./config/routes');
 app.use(routes);
-
 
 // Link routes
 app.post("/topics/:id/links", topicsController.addlink)
