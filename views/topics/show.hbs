@@ -1,13 +1,12 @@
 <h1> {{topic.name}} </h1>
 <p> {{topic.description}} </p>
-
+<!-- topic edit -->
 <div class="editTopic"><a href="/topics/{{topic.id}}/edit">Edit</a></div>
-
+<!-- topic delete -->
 <form method="post" action="/topics/{{topic.id}}?_method=delete">
   <input type="submit" value="delete topic">
 </form>
-
-<a href="/topics/{{_id}}/links/new">add new link</a>
+<!-- links -->
 {{#each topic.links}}
   <a href="{{url}}"><p>{{url}}</p></a>,<p>{{summary}}</p>
   <form method="post" action="/topics/{{../topic._id}}/links/{{_id}}?_method=delete">
@@ -15,6 +14,7 @@
       </form>
 {{/each}}
 
+<!-- add link -->
 <div id="link-new">
   <h3>New Link</h3>
   <form action="/topics/{{topic._id}}/links" method="post">
