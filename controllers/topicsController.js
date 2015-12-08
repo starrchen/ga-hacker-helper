@@ -90,7 +90,7 @@ var topicsController = {
     removelink: function(req, res) {
       TopicModel.findByIdAndUpdate(req.params.topicId, {
         $pull: {
-          reminders: {
+          links: {
             _id: req.params.id
           }
         }
