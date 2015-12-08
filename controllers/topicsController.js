@@ -99,6 +99,23 @@ var topicsController = {
           res.redirect("/topics/" + req.params.topicId)
         }
       })
+    },
+
+    ajax: function(req, res) {
+      TopicModel.find({}, function(err, docs) {
+        res.format({
+          html: function() {
+            res.render("topics/ajax", {
+              topics: docs
+            });
+          },
+          json: function() {
+            res.json("topics/ajax", {
+              topics: docs
+            });
+          }
+        });
+      });
     }
   };
   module.exports = topicsController;

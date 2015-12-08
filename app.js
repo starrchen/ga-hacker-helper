@@ -44,6 +44,7 @@ app.get("/topics/:id.:format?", topicsController.show)
 app.delete("/topics/:id.:format?", topicsController.delete)
 app.put("/topics/:id.:format?", topicsController.update)
 app.get("/topics/:id/edit", topicsController.edit)
+app.get("/ajax", topicsController.ajax)
 
 // Link routes
 app.post("/topics/:id/links", topicsController.addlink)
