@@ -7,11 +7,20 @@
   <input type="submit" value="delete topic">
 </form>
 
-<a href="/topics/{{_id}}/links">add new link</a>
+<a href="/topics/{{_id}}/links/new">add new link</a>
 {{#each topic.links}}
   <a href="{{url}}"><p>{{url}}</p></a>
-  <a href="">Edit</a>
-  <form method="post" action="/topics/{{topic.id}}/links/{{link.id}}?_method=delete">
-    <input type="submit" value="delete link">
-  </form>
+  <form method="post" action="/topics/{{../topic._id}}/links/{{_id}}?_method=delete">
+          <input type="submit" value="Delete This Link">
+      </form>
 {{/each}}
+
+<div id="link-new">
+  <h3>New Link</h3>
+  <form action="/topics/{{topic._id}}/links" method="post">
+    <label>Title</label>
+    <input type="text" name="title">
+    <input type="text" name="url">
+    <input type="submit">
+  </form>
+</div>

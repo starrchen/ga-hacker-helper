@@ -35,7 +35,7 @@ app.use("*.json", function(req, res, next){
   next()
 });
 
-// routes
+// Topic routes
 app.get("/.:format?", topicsController.index)
 app.get("/topics.:format?", topicsController.index)
 app.get("/topics/new.:format?", topicsController.new)
@@ -45,7 +45,9 @@ app.delete("/topics/:id.:format?", topicsController.delete)
 app.put("/topics/:id.:format?", topicsController.update)
 app.get("/topics/:id/edit", topicsController.edit)
 
-
+// Link routes
+app.post("/topics/:id/links", topicsController.addlink)
+app.delete("/topics/:topicId/links/:id", topicsController.removelink)
 //serve to localhost
 app.listen(4000, function(){
  console.log("app listening on port 4000");
