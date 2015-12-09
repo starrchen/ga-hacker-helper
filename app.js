@@ -11,7 +11,7 @@ var session         = require('express-session');
 var methodOverride  = require('method-override') // loads dependency that allows put and delete where not supported in html
 
 //connecting to database
-mongoose.connect('mongodb://localhost/project_3_db');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/project_3_db');
 
 // sets view engine to handlebars
 app.set('view engine', 'hbs');
