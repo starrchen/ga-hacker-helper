@@ -15,11 +15,19 @@ $(document).ready(function() {
      var topicdiv = $('<div/>', {class: "topic-" + i})
      topicdiv.text(topic.name)
      console.log("topicdiv", topicdiv)
-    //  links_div = $("div")
-    //  //for each link in topic.links
-    //    links_div.append(link)
-    // }
-    // topicdiv.append(links_div)
+
+     for (var j = 0; j < topic.links.length; j++){
+       link = topic.links[j]
+       var linkTag = $('<a/>')
+       linkTag.attr("href", link.url)
+       linkTag.text(link.url)
+       console.log(",linkTag", linkTag)
+       topicdiv.append(linkTag)
+     }
+     //for each link in topic.links
+
+
+
      $(".all-topics").append(topicdiv)
    }
 
