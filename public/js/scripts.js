@@ -16,13 +16,13 @@ $(document).ready(function() {
       console.log("clicked");
       var linksUL = $(this).siblings('ul').first();
       // debugger
-      console.log("linksUL", linksUL)
+      console.log("linksUL", linksUL);
       //if links exist
       if(linksUL.length){
         linksUL.toggle();
       } else {
-        var topicId = $(this).parent().attr('id')
-        console.log(topicId)
+        var topicId = $(this).parent().attr('id');
+        console.log(topicId);
         var linksArray = []
         for(i = 0; i < response.topics[topicId].links.length; i++) {
           console.log(response.topics._id);
