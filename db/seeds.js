@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var conn = mongoose.connect('mongodb://localhost/project_3_db');
+var conn = mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/project_3_db');
 
 var TopicModel = require("../models/topic");
 var LinkModel = require("../models/link");
