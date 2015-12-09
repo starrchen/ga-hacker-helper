@@ -1,4 +1,4 @@
-var Song = function(info){
+var Link = function(info){
   this.title = info.title;
   this.url = info.url;
   this.summary = info.summary;

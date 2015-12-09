@@ -72,6 +72,7 @@ var topicsController = {
       })
     })
   },
+
   addlink: function(req, res) {
       TopicModel.findById(req.params.id, function(err, docs) {
         docs.links.push(new LinkModel({
@@ -99,12 +100,6 @@ var topicsController = {
           res.redirect("/topics/" + req.params.topicId)
         }
       })
-    },
-
-    ajax: function(req, res) {
-      TopicModel.find({}).populate("links").then(function(topics){
-        res.json(topics);
-      });
     }
   };
   module.exports = topicsController;
