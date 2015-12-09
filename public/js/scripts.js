@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".postlinks").on("click", function() {
+  $(".linktitle").on("click", function() {
     console.log("clicked");
     $.ajax({
       type: 'GET',
@@ -15,7 +15,6 @@ $(document).ready(function() {
           $('.postlinks').append("<li><a href='" + response.topics[i].links[i].url + "'>" + response.topics[i].links[i].url + '</a>');
           return
         }
-
       }
       $('.postlinks').append(links);
       console.log(response)
