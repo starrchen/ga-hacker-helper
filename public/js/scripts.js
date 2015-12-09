@@ -9,21 +9,20 @@ $(document).ready(function() {
     var allTopics = [];
     for (var i = 0; i < response.topics.length; i++){
     console.log(response.topics[i].name);
-    $(".all-topics").append("<div class='topic'><h3 class='linktitle-"+i+"'>" + response.topics[i].name + "</h3></div>");
+    $(".all-topics").append("<div class='topic'><h3 class='topicHeader' id='"+i+"'>" + response.topics[i].name + "</h3></div>");
   }
-  $(".linktitle").on("click", function() {
+  $(".topicHeader").on("click", function() {
     console.log("clicked");
-    var topicId = $(this).attr('class')
+    var topicId = $(this).attr('id')
     console.log(topicId)
-   var topicInfo = $("<div>").attr("id",topicId);
-   console.log(topicInfo)
+   
 
       var links = function() {
         var linksArray = []
-        for(i = 0; i < response.topics[0].links.length; i++) {
+        for(i = 0; i < response.topics[topicId].links.length; i++) {
           console.log(response.topics._id);
-          console.log(response.topics[0].links[i].url);
-          linksArray[i] = ("<li><a href='" + response.topics[0].links[i].url + "'>" + response.topics[0].links[i].url + '</a>');
+          console.log(response.topics[topicId].links[i].url);
+          linksArray[i] = ("<li><a href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
 
         }
         return linksArray
