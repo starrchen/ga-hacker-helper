@@ -13,13 +13,17 @@ $(document).ready(function() {
     }).done(function(response) {
       console.log(topicId);
       var links = function() {
+        var linksArray = []
         for(i = 0; i < response.topics[0].links.length; i++) {
-          console.log(topicInfo);
+          console.log(response.topics._id);
           console.log(response.topics[0].links[i].url);
-          $('#'+topicId).append("<li><a href='" + response.topics[0].links[i].url + "'>" + response.topics[0].links[i].url + '</a>');
+          linksArray[i] = ("<li><a href='" + response.topics[0].links[i].url + "'>" + response.topics[0].links[i].url + '</a>');
+          
         }
+        return linksArray
       };
-      $('.postlinks').append(links);
+      links()
+      $('#'+topicId).append(links);
     }).fail(function(response){
       console.log("Ajax get request failed.");
     });
