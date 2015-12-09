@@ -14,20 +14,24 @@ $(document).ready(function() {
 
     $(".topicHeader").on("click", function() {
       console.log("clicked");
-
+      var linksUL = $(this).siblings('ul').first();
+      // debugger
+      console.log("linksUL", linksUL)
       //if links exist
-        // $(this)
-      var topicId = $(this).parent().attr('id')
-      console.log(topicId)
-      var linksArray = []
-      for(i = 0; i < response.topics[topicId].links.length; i++) {
-        console.log(response.topics._id);
-        console.log(response.topics[topicId].links[i].url);
-        linksArray[i] = ("<li><a href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
+      if(linksUL.length){
+        linksUL.toggle();
+      } else {
+        var topicId = $(this).parent().attr('id')
+        console.log(topicId)
+        var linksArray = []
+        for(i = 0; i < response.topics[topicId].links.length; i++) {
+          console.log(response.topics._id);
+          console.log(response.topics[topicId].links[i].url);
+          linksArray[i] = ("<li><a href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
+        }
+        var linksUL = $("<ul>").append(linksArray);
+        $('#'+topicId).append(linksUL);
       }
-      var linksUL = $("<ul>").append(linksArray);
-      $('#'+topicId).append(linksUL);
-      $(this).off('click')
     })
   }).fail(function(response){
     console.log("Ajax get request failed.");
