@@ -13,6 +13,7 @@ $(document).ready(function() {
         console.log(response.topics[0].links[i].url)
         $('.postlinks').append(response.topics[0].links[i].url);
       }
+      return $('.postlinks').append(links);
     }
       console.log(response)
       $('.postlinks').append(links);
