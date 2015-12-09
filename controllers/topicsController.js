@@ -73,32 +73,48 @@ var topicsController = {
     })
   },
   addlink: function(req, res) {
-      TopicModel.findById(req.params.id, function(err, docs) {
-        docs.links.push(new LinkModel({
-          url: req.body.url,
-          title: req.body.title,
-          summary: req.body.summary,
-          source: req.body.source
-        }))
-        docs.save(function(err) {
-          if (!err) {
-            res.redirect("/topics/" + req.params.id)
-          }
-        })
-      })
-    },
-    removelink: function(req, res) {
-      TopicModel.findByIdAndUpdate(req.params.topicId, {
-        $pull: {
-          links: {
-            _id: req.params.id
-          }
-        }
-      }, function(err, docs) {
+    TopicModel.findById(req.params.id, function(err, docs) {
+      docs.links.push(new LinkModel({
+        url: req.body.url,
+        title: req.body.title,
+        summary: req.body.summary,
+        source: req.body.source
+      }))
+      docs.save(function(err) {
         if (!err) {
-          res.redirect("/topics/" + req.params.topicId)
+          res.redirect("/topics/" + req.params.id)
         }
       })
-    }
-  };
-  module.exports = topicsController;
+    })
+  },
+  removelink: function(req, res) {
+    TopicModel.findByIdAndUpdate(req.params.topicId, {
+      $pull: {
+        links: {
+          _id: req.params.id
+        }
+      }
+    }, function(err, docs) {
+      if (!err) {
+        res.redirect("/topics/" + req.params.topicId)
+      }
+    })
+  },
+  ajax: function(req, res) {
+    TopicModel.find({}, function(err, docs) {
+      res.format({
+        html: function() {
+          res.render("topics/ajax", {
+            topics: docs
+          });
+        },
+        json: function() {
+          res.json("topics/ajax", {
+            topics: docs
+          });
+        }
+      });
+    });
+  }
+};
+module.exports = topicsController;

@@ -9,13 +9,13 @@ var usersController = require('../controllers/users');
 var topicsController = require('../controllers/topicsController');
 function authenticatedUser(req, res, next){
   if(req.isAuthenticated()) return next()
-  res.redirect("/")
+  res.redirect("/");
 }
 
 // Routes necessary for Passport user authentication
 router.route('/signup')
   .get(usersController.getSignup)
-  .post(usersController.postSignup)
+  .post(usersController.postSignup);
 
 router.route('/login')
   .get(usersController.getLogin)
@@ -25,17 +25,24 @@ router.route("/logout")
   .get(usersController.getLogout)
 
 // Topic routes
-router.get("/.:format?", topicsController.index)
-router.get("/topics.:format?", topicsController.index)
-router.get("/topics/new.:format?", topicsController.new)
-router.post("/topics.:format?", topicsController.create)
-router.get("/topics/:id.:format?", topicsController.show)
-router.delete("/topics/:id.:format?", topicsController.delete)
-router.put("/topics/:id.:format?", topicsController.update)
-router.get("/topics/:id/edit", topicsController.edit)
+router.get("/.:format?", topicsController.index);
+router.get("/topics.:format?", topicsController.index);
+router.get("/topics/new.:format?", topicsController.new);
+router.post("/topics.:format?", topicsController.create);
+router.get("/topics/:id.:format?", topicsController.show);
+router.delete("/topics/:id.:format?", topicsController.delete);
+router.put("/topics/:id.:format?", topicsController.update);
+router.get("/topics/:id/edit", topicsController.edit);
 
 // Link routes
-router.post("/topics/:id/links", topicsController.addlink)
-router.delete("/topics/:topicId/links/:id", topicsController.removelink)
+router.post("/topics/:id/links", topicsController.addlink);
+router.delete("/topics/:topicId/links/:id", topicsController.removelink);
 
-module.exports = router
+
+// AJAX routes
+router.get("/ajax", topicsController.ajax);
+
+
+
+
+module.exports = router;

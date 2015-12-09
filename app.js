@@ -8,7 +8,7 @@ var morgan          = require('morgan');
 var cookieParser    = require('cookie-parser');
 var bodyParser      = require('body-parser'); // loads dependency for middleware for parameters
 var session         = require('express-session');
-var methodOverride  = require('method-override') // loads dependency that allows put and delete where not supported in html
+var methodOverride  = require('method-override'); // loads dependency that allows put and delete where not supported in html
 
 //connecting to database
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/project_3_db');
