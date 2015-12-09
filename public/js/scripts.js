@@ -10,13 +10,16 @@ $(document).ready(function() {
       console.log(response.topics[0].name);
       var links = function() {
         for(i = 0; i < response.topics[0].links.length; i++) {
-        console.log(response.topics[0].links[i].url)
-        $('.postlinks').append(response.topics[0].links[i].url);
+          // var linkResource = ('.postlinks').append('<h1></h1>')
+          console.log(response.topics[0].links[i].url)
+          $('.postlinks').append('<p>' + response.topics[i].links[i].url + '</p>');
+          return
+        }
+
       }
-      return $('.postlinks').append(links);
-    }
-      console.log(response)
       $('.postlinks').append(links);
+      console.log(response)
+      // $('.postlinks').append(links);
     }).fail(function(response){
       console.log("Ajax get request failed.");
     });
