@@ -60,7 +60,7 @@ var topicsController = {
       name: req.body.name,
       description: req.body.description,
       imageUrl: req.body.imageUrl
-    }).then(function(doc) {
+    }, function(doc) {
       res.redirect("/topics");
     })
   },
