@@ -1,8 +1,7 @@
 $(document).ready(function() {
   $(".linktitle").on("click", function() {
     console.log("clicked");
-    console.log(this.id)
-    
+    console.log($(this).attr('id'))
     $.ajax({
       type: 'GET',
       dataType: 'json',
