@@ -1,6 +1,7 @@
 <h1>Edit</h1>
-<form method="post" action="/topics/{{topic._id}}?_method=put">
+<form method="post" action="/topics/{{topic._id}}">
   <label>Name:</label>
+  <input type="hidden" name="_method" value="PUT">
   <input type="text" name="name" value="{{topic.name}}">
   <label>Description:</label>
   <input type="text" name="description" value="{{topic.description}}">
