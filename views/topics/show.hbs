@@ -1,12 +1,20 @@
 <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-<h1> {{topic.name}} </h1>
-<p> {{topic.description}} </p>
+<h2 class='center' id='new-topic-header'>{{topic.name}}</h2>
+<p class='flow-text center'> {{topic.description}} </p>
+
+<div class="row">
+
+
 
 <div class="editTopic"><a href="/topics/{{topic.id}}/edit">Edit</a></div>
 
-<form method="post" action="/topics/{{topic.id}}?_method=delete">
+<form method="post" action="/topics/{{topic.id}}">
+  <input type="hidden" name="_method" value="DELETE" />
   <input type="submit" value="delete topic">
 </form>
+
+
+
 
 
 {{#each topic.links}}

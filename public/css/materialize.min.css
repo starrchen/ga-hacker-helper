@@ -104,5 +104,9 @@ h1.header {
 
 .submit {
   background-color: #503D43;
-  
+}
+
+p.flow-text {
+  color: #2F2F72;
+  font-weight: bold;
 }
