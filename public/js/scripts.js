@@ -12,7 +12,7 @@ $(document).ready(function() {
         for(i = 0; i < response.topics[0].links.length; i++) {
           // var linkResource = ('.postlinks').append('<h1></h1>')
           console.log(response.topics[0].links[i].url)
-          $('.postlinks').append('<p>' + response.topics[i].links[i].url + '</p>');
+          $('.postlinks').append("<li><a href='" + response.topics[i].links[i].url + "'>" + response.topics[i].links[i].url + '</a>');
           return
         }
 
