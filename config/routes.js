@@ -24,7 +24,7 @@ router.route('/login')
 router.route("/logout")
   .get(usersController.getLogout)
 
-// For implementing user authentication
+// For implementing user authentication -- thank you Tyler for sharing this code!
 router.route('/auth').get(function(req,res){
   if (req.user){
     res.json({isAuthenticated : "true"});
