@@ -5,25 +5,26 @@
 
 <div class='container' id='topicContainer'>
   <div class="row">
-  {{#each topics}}
+    {{#each topics}}
     <div class="col s12">
-      <div class="card small" id='topicCard'>
+      <div class="card activator" id='topicCard'>
         <div id='color-one'>
-        <div class="card-image">
-          <img src="{{imageUrl}}">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class='activator' src="{{imageUrl}}">
+          </div>
+          <div class='card-content topic-description center'>
+            <span class="card-title activator center" id='topicName'>{{name}}<i class="material-icons right">more_vert</i></span>
+            <p class='center-align' id='topicDescription'>{{description}}</p>
+            <a class='white-text' href="/topics/{{_id}}">Learn More</a>
+          </div>
+          </div>
 
+
+        <div class="card-reveal" id='learn-more'>
+          <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
         </div>
-
-          <div class='topic-description center'>
-            <h5 class="card-title center" id='topicName'>{{name}}</h5>
-          <p class='center-align' id='topicDescription'>{{description}}</p>
-
       </div>
       </div>
-        <div class="card-action hoverable" id='learn-more'>
-          <a class='white-text' href="/topics/{{_id}}">Learn More</a></div>
-        </div>
-      </div>
-  {{/each}}
+      {{/each}}
+    </div>
   </div>
-</div>
