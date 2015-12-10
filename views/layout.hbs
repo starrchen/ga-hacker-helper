@@ -37,32 +37,36 @@
   <nav>
     <div class="nav-wrapper">
       <ul>
-
         <li><a href="/">Home</i></a></li>
+        <li><a href="/ajax">One Pager</i></a></li>
         {{#if currentUser}}
         <li><a href="/logout">Logout</a></li<a>
           {{else}}
           <li><a href="/login">Login</a></li>
           <li><a href="/signup">Signup</a></li>
           {{/if}}
-
       </ul>
     </div>
   </nav>
 
   <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
+    <li><a href="/">Home</i></a></li>
+    <li><a href="/ajax">One Pager</i></a></li>
+    {{#if currentUser}}
+    <li><a href="/logout">Logout</a></li<a>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Signup</a></li>
+      {{/if}}
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
-          <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <a class="collapsible-header">Topics<i class="mdi-navigation-arrow-drop-down"></i></a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#!">First</a></li>
-              <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
+              {{#each topics}}
+              <li><a href="/topics/{{id}}">{{name}}</a><li>
+              {{/each}}
             </ul>
           </div>
         </li>
