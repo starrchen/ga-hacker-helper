@@ -19,7 +19,7 @@
     <!-- Topic links -->
     {{#each topic.links}}
       <li>
-        <div class='show-links brown lighten-3'>{{title}}<a href="{{url}}" class="secondary-content"><i class="material-icons indigo-text text-darken-4">send</i></a>
+        <div class='show-links brown lighten-3'>{{title}}<a target="_blank" href="{{url}}" class="secondary-content"><i class="material-icons indigo-text text-darken-4">send</i></a>
           <!-- link delete -->
           <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}">
             <input type="hidden" name="_method" value="DELETE" />
