@@ -1,10 +1,6 @@
 <div class="row center">
   <a href="/topics/new" id="download-button" class="btn-large hoverable waves-effect waves-light lighten-1">New Topic</a>
 </div>
-
-
-
-
     {{#each topics}}
 <div class='container' id='topicContainer'>
 <div class="row">
@@ -17,6 +13,7 @@
           <div class='card-content topic-description'>
             <span class="card-title indigo-text text-darken-4 activator" id='topicName'>{{name}}: </span>
             <p class='activator indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
+            <a href="/topics/{{_id}}">Add Link</a>
           </div>
         </div>
         <div class="card-reveal">

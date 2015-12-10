@@ -8,10 +8,10 @@ var morgan          = require('morgan');
 var cookieParser    = require('cookie-parser');
 var bodyParser      = require('body-parser'); // loads dependency for middleware for parameters
 var session         = require('express-session');
-var methodOverride  = require('method-override') // loads dependency that allows put and delete where not supported in html
+var methodOverride  = require('method-override'); // loads dependency that allows put and delete where not supported in html
 
 //connecting to database
-mongoose.connect('mongodb://localhost/project_3_db');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/project_3_db');
 
 // sets view engine to handlebars
 app.set('view engine', 'hbs');
@@ -52,18 +52,12 @@ app.use(function(req, res, next){
 });
 
 // routes
-app.get("/.:format?", topicsController.index)
-app.get("/topics.:format?", topicsController.index)
-app.get("/topics/new.:format?", topicsController.new)
-app.post("/topics.:format?", topicsController.create)
-app.get("/topics/:id.:format?", topicsController.show)
-app.get("/tppics/:id/edit.:format?", topicsController.edit)
-app.delete("/topics/:id.:format?", topicsController.delete)
-
 var routes = require('./config/routes');
 app.use(routes);
 
+
+
 //serve to localhost
-app.listen(4000, function(){
+app.listen(process.env.PORT || 4000, function(){
  console.log("app listening on port 4000");
 });
