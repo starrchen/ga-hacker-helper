@@ -1,11 +1,12 @@
+<div class="container">
 <h1>{{topic.name}} </h1>
 <p> {{topic.description}} </p>
 <!-- topic edit -->
-<div class="editTopic"><a href="/topics/{{topic.id}}/edit">Edit</a></div>
+<div class="editTopic"><a class="black-text waves-effect waves-light btn" href="/topics/{{topic.id}}/edit">Edit</a></div>
 <!-- topic delete -->
 <form method="post" action="/topics/{{topic.id}}">
   <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" value="delete topic">
+  <input type="submit" value="delete topic" class="black-text waves-effect waves-light btn">
 </form>
 
 <!-- links -->
@@ -31,4 +32,5 @@
     <input type="text" name="source">
     <input type="submit">
   </form>
+</div>
 </div>
