@@ -2,12 +2,20 @@
 <h2 class='center' id='new-topic-header'>{{topic.name}}</h2>
 <h4 class="center">{{topic.description}}</h4>
 <!-- Topic Edit -->
-<div class="editTopic"><a href="/topics/{{topic.id}}/edit">Edit Topic</a></div>
+
+
+<div class='center'>
+<a href="/topics/{{topic.id}}/edit" class='white-text'><button class="btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
+  <i class="material-icons right">send</i>
+</button></a>
+</div>
+
 <!-- Topic Delete -->
-<form method="post" action="/topics/{{topic.id}}">
+<form method="post" class='deleteTopic center' action="/topics/{{topic.id}}">
   <input type="hidden" name="_method" value="DELETE" />
   <input type="submit" value="delete topic">
 </form>
+</span>
 <div class="row">
   <ul class="collection with-header">
     <li class="collection-header center">
