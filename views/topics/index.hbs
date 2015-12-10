@@ -10,28 +10,23 @@
           <div class="card-image waves-effect waves-block waves-light">
             <img class='card-image activator responsive-img ' src="{{imageUrl}}">
           </div>
-          <div class='card-content topic-description'>
-            <span class="card-title indigo-text text-darken-4 activator" id='topicName'>{{name}}: </span>
-            <p class='activator indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
+          <div class='card-content topic-description activator'>
+            <p class="card-title white-text text-darken-4" id='topicName'>{{name}}: </p>
+            <p class='indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
           </div>
         </div>
-        <div class="card-reveal  brown lighten-4">
+        <div class="card-reveal  brown lighten-4 collection">
+
           <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
 
-          <ul>
             {{#each links}}
-            <li class="collection-item">
-              <div class='row'><strong>{{title}}: </strong>
-                {{summary}}
-                <a href="{{url}}" class="indigo-text text-darken-4 material-icons secondary-content">send</a>
-              </div>
-            </li>
+            <a href="{{url}}" class="indigo-text text-darken-4 collection-item">
+              <strong>{{title}}: </strong>
+                {{summary}}</a>
             {{/each}}
           </ul>
-          <div class='center'>
-          <a href="/topics/{{_id}}" class='white-text' class="btn submit waves-effect waves-light" type="submit" name="action">Add Resource
-            <i class="material-icons right">send</i></a>
-          </button>
+          <div class='center add-topic'>
+            <a href="/topics/{{_id}}" class="btn submit waves-effect waves-light" type="submit" name="action">Add Resource</a>
           </div>
         </div>
       </div>
