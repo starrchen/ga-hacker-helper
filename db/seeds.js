@@ -82,8 +82,8 @@ var rubyBlock = new LinkModel({
 
 var moreAtomLinks = [mergeConflicts, toDoShow, railsSnippets, rubyBlock];
 
-for(var j = 0; i < moreAtomLinks.length; i++){
-  atom.links.push(moreAtomLinks[i]);
+for(var j = 0; j < moreAtomLinks.length; j++){
+  atom.links.push(moreAtomLinks[j]);
   atom.save(function(err){
     if(err){
       console.log(err);
