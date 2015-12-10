@@ -7,15 +7,14 @@
   <div class="row">
     {{#each topics}}
     <div class="col s12">
-      <div class="card medium" id='topicCard'>
-        <div id='color-one'>
+      <div class="card medium activator" id='topicCard'>
+        <div id='color-one' class='center'>
           <div class="card-image waves-effect waves-block waves-light">
-            <img class='card-image activator responsive-img' src="{{imageUrl}}">
+            <img class='card-image activator responsive-img ' src="{{imageUrl}}">
           </div>
-          <div class='card-content topic-description right'>
-            <span class="card-title activator center" id='topicName'>{{name}}<i class="material-icons right">more_vert</i></span>
+          <div class='card-content topic-description '>
+            <span class="card-title activator" id='topicName'>{{name}}<i class="material-icons right">more_vert</i></span>
             <p class='center-align activator' id='topicDescription'>{{description}}</p>
-            <p class='activator' id='learn-more'>Learn More</p>
           </div>
         </div>
         <div class="card-reveal">
