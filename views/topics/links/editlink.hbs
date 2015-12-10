@@ -1,0 +1,9 @@
+<h1>Edit Link</h1>
+<form method="post" action="/topics/{{topic._id}}/links/{{id}}">
+  <label>Title:</label>
+  <input type="hidden" name="_method" value="PUT">
+  <input type="text" name="title" value="{{title}}">
+  <input type="submit" value="Edit Link">
+</form>
+
+<!-- <script src="/js/user-auth.js"></script> -->
