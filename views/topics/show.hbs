@@ -29,11 +29,11 @@
           <p>{{summary}}</p>
           <!-- link delete -->
           <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}">
-            <input type="hidden" name="_method" value="DELETE" />
-            <button class="btn waves-effect waves-light" type="submit" name="action">Delete
-              <i class="material-icons right">delete</i>
-            </button>
-          </form>
+              <input type="hidden" name="_method" value="DELETE" />
+              <button class="btn waves-effect waves-light" type="submit" name="action">Delete
+                <i class="material-icons right">delete</i>
+              </button>
+            </form>
         </div>
       </li>
       {{/each}}

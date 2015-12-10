@@ -107,3 +107,8 @@ footer{
 #edelete-topic{
   display: inline;
 }
+/*ajax style*/
+
+.topicHeader:hover {
+  color: #503D43;
+}
