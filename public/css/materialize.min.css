@@ -53,8 +53,7 @@ h1.header {
 .card {
   background-color: #503D43;
   position: relative;
-  max-height: 300px;
-
+  height: auto;
 }
 
 #color-one{
@@ -62,7 +61,7 @@ h1.header {
   background: #ceb9a2; /* Old browsers */
   background: -moz-linear-gradient(45deg,  #ceb9a2 0%, #ccb092 0%, #ceb9a2 0%, #40333c 99%, #503d43 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(45deg,  #ceb9a2 0%,#ccb092 0%,#ceb9a2 0%,#40333c 99%,#503d43 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg,  #ceb9a2 0%,#ccb092 0%,#ceb9a2 0%,#40333c 99%,#503d43 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(45d`eg,  #ceb9a2 0%,#ccb092 0%,#ceb9a2 0%,#40333c 99%,#503d43 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceb9a2', endColorstr='#503d43',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -81,7 +80,10 @@ h1.header {
 
 .topic-description {
   position: absolute;
-  display: inline-block;
+  display: inline;
+  text-align: center;
+  margin: auto;
+  width: 80%;
 }
 #learn-more {
   color: #CEB9A2;

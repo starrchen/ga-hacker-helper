@@ -1,14 +1,15 @@
 <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 <h2 class='center' id='new-topic-header'>{{topic.name}}</h2>
 
+<div class="editTopic"><a href="/topics/{{topic.id}}/edit">New Link</a></div>
 
 <div class="row">
 
         <ul class="collection with-header">
-          <li class="collection-header"><h4>{{topic.description}}</h4></li>
+          <li class="collection-header center"><h4>{{topic.description}}</h4></li>
           {{#each topic.links}}
           <li class="collection-item"><div>{{title}}<a href="{{url}}" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-{{/each}}
+          {{/each}}
         </ul>
 
 
