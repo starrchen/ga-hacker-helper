@@ -19,19 +19,20 @@
             <p class='activator indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
           </div>
         </div>
-        <div class="card-reveal">
+        <div class="card-reveal  brown lighten-4">
           <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
-          <a class='center' id='topicTitle' href="/topics/{{_id}}">Add Resource</a>
+
           <ul>
             {{#each links}}
             <li class="collection-item">
               <div class='row'><strong>{{title}}: </strong>
                 {{summary}}
-                <a href="{{url}}" class="material-icons secondary-content">send</a>
+                <a href="{{url}}" class="indigo-text text-darken-4 material-icons secondary-content">send</a>
               </div>
             </li>
             {{/each}}
           </ul>
+          <p class='center'><a class='indigo-text text-darken-4' id='topicTitle' href="/topics/{{_id}}">Add Resource</a></p>
         </div>
       </div>
     </div>
