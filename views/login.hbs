@@ -1,13 +1,14 @@
 
 <h2 class='center' id='new-topic-header'>Login</h2>
 
-{{#if message.length}}
+<div class="container">
+
+  {{#if message.length}}
   <div>{{message}}</div>
-{{/if}}
+  {{/if}}
 
-<p>Log in below or sign up <a href="/signup">here</a>.</p>
+  <p>Log in below or sign up <a href="/signup">here</a>.</p>
 
-<div class="row">
   <form method="post" action="/login" class='col s12'>
     <div class='section input-field'>
       <input type="text" name="email" id="email" class="validate">
@@ -24,4 +25,5 @@
       </button>
     </div>
   </form>
+
 </div>

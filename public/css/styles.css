@@ -94,8 +94,16 @@ p.flow-text {
   background-color: tomato;
 }
 
+form {
+  margin-bottom: 20px;
+}
+
 footer{
-  padding-top: 20px;
+  margin-top: 20px;
   text-align: center;
   font-size: small;
+}
+
+#edelete-topic{
+  display: inline;
 }

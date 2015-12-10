@@ -4,19 +4,19 @@
 
 <!-- Topic Edit -->
 <div class='center'>
-  <a href="/topics/{{topic.id}}/edit" class='white-text'><button class="btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
+  <a href="/topics/{{topic.id}}/edit" class='white-text'><button id="edelete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
     <i class="material-icons right">send</i>
   </button></a>
 </div>
 <!-- Topic Delete -->
 <form method="post" class='deleteTopic center' action="/topics/{{topic.id}}">
   <input type="hidden" name="_method" value="DELETE" />
-  <button class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
+  <button id="edelete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
     <i class="material-icons right">delete</i>
   </button>
 </form>
 
-<div class='container'>
+<div class='container collection'>
   <div class="row section collection-item">
     <h4 class='center'>Links</h4>
     <ul>
