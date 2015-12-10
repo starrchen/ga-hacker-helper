@@ -3,7 +3,7 @@
 </div>
     {{#each topics}}
 <div class='container' id='topicContainer'>
-<div class="row">
+  <div class="row">
     <div class="col s12">
       <div class="card activator" id='topicCard'>
         <div id='color-one' class='center'>
@@ -17,10 +17,21 @@
           </div>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+          <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+          <a class='center' id='topicTitle' href="/topics/{{_id}}">Add Resource</a>
+          <ul>
+            {{#each links}}
+            <li class="collection-item">
+              <div class='row'><strong>{{title}}: </strong>
+                {{summary}}
+                <a href="{{url}}" class="material-icons secondary-content">send</a>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 </div>
-</div>
-    {{/each}}
+{{/each}}
