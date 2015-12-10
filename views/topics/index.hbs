@@ -3,11 +3,13 @@
 </div>
 
 
-<div class='container' id='topicContainer'>
-  <div class="row">
+
+
     {{#each topics}}
+<div class='container' id='topicContainer'>
+<div class="row">
     <div class="col s12">
-      <div class="card medium activator" id='topicCard'>
+      <div class="card activator" id='topicCard'>
         <div id='color-one' class='center'>
           <div class="card-image waves-effect waves-block waves-light">
             <img class='card-image activator responsive-img ' src="{{imageUrl}}">
@@ -22,6 +24,6 @@
         </div>
       </div>
     </div>
-    {{/each}}
-  </div>
 </div>
+</div>
+    {{/each}}
