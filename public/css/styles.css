@@ -1,0 +1,80 @@
+body {
+  background-color: #CEB9A2;
+  position: relative;
+}
+
+#index-banner {
+  background-image: url("../images/headerImage.jpg");
+  height: 5%;
+}
+
+h5.header {
+  color: white;
+}
+
+h1.header {
+  color: white;
+}
+
+.nav-wrapper {
+  background-color: #503D43;
+}
+.mdi-navigation-menu {
+  font-size: 4rem;
+  padding-left: 10px;
+  color: #503D43;
+}
+
+#download-button {
+  background-color: #503D43;
+}
+
+#new-topic-header {
+  color: #503D43;
+  background-color: #CEB9A2;
+}
+
+
+ .input-field input[type=text]:focus + label {
+    color: #0E7C3A;
+  }
+
+  .input-field input[type=text]:focus {
+  border-bottom: 1px solid #0E7C3A;
+  box-shadow: 0 1px 0 0 #0E7C3A;
+}
+
+
+.submit {
+  background-color: #503D43;
+}
+
+p.flow-text {
+  color: #2F2F72;
+  font-weight: bold;
+}
+.card-image {
+  background-size: cover;
+  display: inline-block;
+  margin: 0px;
+}
+
+#topicCard{
+  background: #ceb9a2;
+  background: -moz-linear-gradient(45deg,  #ceb9a2 0%, #ccb092 0%, #ceb9a2 0%, #40333c 99%, #503d43 100%);
+  background: -webkit-linear-gradient(45deg,  #ceb9a2 0%,#ccb092 0%,#ceb9a2 0%,#40333c 99%,#503d43 100%);
+  background: linear-gradient(45d`eg,  #ceb9a2 0%,#ccb092 0%,#ceb9a2 0%,#40333c 99%,#503d43 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceb9a2', endColorstr='#503d43',GradientType=1 );
+}
+
+.topic-description {
+  background-color: #503D43;
+}
+
+.topic-description p, span{
+  display: inline-block;
+}
+
+.link-title {
+  font-weight: bolder;
+}
