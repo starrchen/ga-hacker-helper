@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   var url = "http://localhost:4000/topics.json"
   var request = $.ajax({

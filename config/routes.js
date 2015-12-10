@@ -24,6 +24,15 @@ router.route('/login')
 router.route("/logout")
   .get(usersController.getLogout)
 
+// For implementing user authentication -- thank you Tyler for sharing this code!
+router.route('/auth').get(function(req,res){
+  if (req.user){
+    res.json({isAuthenticated : "true"});
+  }else {
+    res.json({isAuthenticated : "false"});
+  }
+});
+
 // Topic routes
 router.get("/.:format?", topicsController.index);
 router.get("/topics.:format?", topicsController.index);
