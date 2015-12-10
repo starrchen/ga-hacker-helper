@@ -10,23 +10,18 @@
 </button></a>
 </div>
 
-<!-- Topic Delete -->
-<form method="post" class='deleteTopic center' action="/topics/{{topic.id}}">
-  <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" value="delete topic">
-</form>
-</span>
-<div class="row">
-  <ul class="collection with-header">
-    <li class="collection-header center">
-      <h4>Links on {{topic.name}}</h4>
-    </li>
+<div class='container'>
+<div class="row section collection-item">
+  <h4 class='center'>Links</h4>
+  <ul>
+
+
     <!-- Topic links -->
     {{#each topic.links}}
-      <li class="collection-item">
-        <div>{{title}}<a href="{{url}}" class="secondary-content"><i class="material-icons">send</i></a>
+      <li>
+        <div class='show-links brown lighten-3'>{{title}}<a href="{{url}}" class="secondary-content"><i class="material-icons indigo-text text-darken-4">send</i></a>
           <!-- link delete -->
-          <form method="post" action="/topics/{{../topic._id}}/links/{{id}}">
+          <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}">
             <input type="hidden" name="_method" value="DELETE" />
             <input type="submit" value="Delete This Link">
           </form>
@@ -34,6 +29,8 @@
       </li>
     {{/each}}
   </ul>
+</div>
+</div>
   <!-- add link -->
   <div id="link-new">
     <h3>New Link</h3>
@@ -49,3 +46,9 @@
       <input type="submit">
     </form>
   </div>
+
+  <!-- Topic Delete -->
+  <form method="post" class='deleteTopic center' action="/topics/{{topic.id}}">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="delete topic">
+  </form>

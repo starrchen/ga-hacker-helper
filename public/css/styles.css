@@ -72,3 +72,13 @@ p.flow-text {
 .topic-description p, span{
   display: inline-block;
 }
+
+.collection-item {
+  background-color: inherit;
+}
+
+.show-links {
+  border: 2px solid #503D43;
+  padding: 4px;
+  border-radius: 5px;
+}
