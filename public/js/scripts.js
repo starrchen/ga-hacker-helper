@@ -8,7 +8,7 @@ $(document).ready(function() {
     var allTopics = [];
     for (var i = 0; i < response.topics.length; i++){
       console.log(response.topics[i].name);
-      $(".all-topics").append("<div class='topic' id='"+i+"'><h3 class='topicHeader'>" + response.topics[i].name + "</h3></div>");
+      $(".all-topics").append("<div class='topic' id='"+i+"'><h2 class='topicHeader'>" + response.topics[i].name + "</h2></div>");
     }
 
     $(".topicHeader").on("click", function() {
@@ -26,9 +26,9 @@ $(document).ready(function() {
         for(i = 0; i < response.topics[topicId].links.length; i++) {
           console.log(response.topics._id);
           console.log(response.topics[topicId].links[i].url);
-          linksArray[i] = ("<li><a href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
+          linksArray[i] = ("<li><a class='collection-item ajaxlinks' href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
         }
-        var linksUL = $("<ul>").append(linksArray);
+        var linksUL = $("<ul class='collection ajax-links'>").append(linksArray);
         $('#'+topicId).append(linksUL);
       }
     })

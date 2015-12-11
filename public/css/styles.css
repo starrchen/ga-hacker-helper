@@ -117,3 +117,31 @@ footer{
   overflow: auto;
   height: 220px;
 }
+/*ajax style*/
+
+.topicHeader:hover {
+  color: #503D43;
+
+}
+.topicHeader {
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+  border: 1px solid black;
+}
+.topic {
+  /*border-bottom: 1px solid black;
+  border-width: 75%;*/
+  background-color: gainsboro;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+.ajax h1 {
+  text-align: center;
+}
+
+.ajax-links {
+  margin: 0px;
+}
