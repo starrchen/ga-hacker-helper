@@ -111,8 +111,20 @@ footer{
 
 .topicHeader:hover {
   color: #503D43;
+
+}
+.topicHeader {
+  padding: 0px;
+    margin: 0px;
+}
+.topic {
+  /*border-bottom: 1px solid black;
+  border-width: 75%;*/
+  background-color: gainsboro;
+  padding: 0px;
+  margin: 0px;
 }
 
-/*.all-topics {
-  background-color: beige;
-}*/
+.ajax h1 {
+  text-align: center;
+}
