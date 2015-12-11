@@ -41,17 +41,32 @@
   </form>
 
   <!-- add link -->
+
+
   <div id="new-link" class="col s3">
     <h3>New Link</h3>
     <form action="/topics/{{topic._id}}/links" method="post">
-      <label>Title</label>
-      <input type="text" name="title">
-      <label>URL</label>
-      <input type="text" name="url">
-      <label>Summary</label>
-      <input type="text" name="summary">
-      <label>Source</label>
-      <input type="text" name="source">
+      <div class='section input-field'>
+        <input type="text" name="title" id='title' class="validate">
+        <label for="title">Title</label>
+      </div>
+
+      <div class='section input-field'>
+        <input type="text" name="url" id='url' class="validate">
+        <label for="url">URL</label>
+      </div>
+
+      <div class='section input-field'>
+        <input type="text" name="summary" id='summary' class="validate">
+        <label for="summary">Summary</label>
+      </div>
+
+      <div class='section input-field'>
+        <input type="text" name="source" id='source' class="validate">
+        <label for="source">Source</label>
+      </div>
+
+      
       <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons left">add</i> Add this link</button>
     </form>
   </div>
