@@ -82,7 +82,7 @@ p.flow-text {
   border: 2px solid #503D43;
   padding: 4px;
   border-radius: 5px;
-  height: 200px;
+  height: 250px;
 }
 
 .link-title {
@@ -106,8 +106,14 @@ footer{
 
 .add-link{
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card-image img{
   height: 250px;
+}
+
+#link-items{
+  overflow: auto;
+  height: 220px;
 }

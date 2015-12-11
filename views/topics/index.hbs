@@ -18,11 +18,13 @@
     <div class="card-reveal  brown lighten-4 collection">
 
       <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+      <div id="link-items">
       {{#each links}}
       <a href="{{url}}" class="indigo-text text-darken-4 collection-item">
         <strong>{{title}}: </strong>
         {{summary}}</a>
         {{/each}}
+      </div>
       </ul>
 
       <div class='center add-link'>
