@@ -107,3 +107,7 @@ footer{
 .add-link{
   margin-top: 10px;
 }
+
+.card-image img{
+  height: 250px;
+}

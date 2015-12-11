@@ -20,7 +20,7 @@ var atom = new TopicModel({
 var jobs = new TopicModel({
   name: "Jobs/Interviews",
   description: "Interview tips, resume building resources, open positions, and more",
-  imageUrl: "images/jobs.png"
+  imageUrl: "images/hireme.png"
 });
 
 var lol = new TopicModel({
@@ -28,20 +28,6 @@ var lol = new TopicModel({
   description: "Jokes and humor for developers",
   imageUrl: "images/lol.png"
 });
-
-// var topics = [atom, jobs];
-// var links = [powermode, techQs];
-//
-// for(var i = 0; i < topics.length; i++){
-//   topics[i].links.push(links[i]);
-//   topics[i].save(function(err){
-//     if (err){
-//       console.log(err);
-//     }else {
-//       console.log("topic was saved");
-//     }
-//   });
-// };
 
 // Atom links
 
