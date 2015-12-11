@@ -25,8 +25,8 @@
             <div class='card-action link-card-action'>
               <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}" onsubmit="return confirm('Are you sure you want to delete this link?')">
                 <input type="hidden" name="_method" value="DELETE" />
-                <button class="btn hoverable submit" type="submit" name="action">
-                  <i class="material-icons">delete</i>
+                <button class="btn hoverable delete submit" type="submit" name="action">
+                  <i class="material-icons delete">delete</i>
                 </button>
               </form>
             </div>
@@ -39,7 +39,7 @@
     <div class='section'>
       <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
         <input type="hidden" name="_method" value="DELETE"/>
-        <button class="btn submit hoverable" type="submit" name="action">Delete topic
+        <button class="btn submit delete hoverable" type="submit" name="action">Delete topic
           <i class="material-icons right">delete</i>
         </button>
       </form>
