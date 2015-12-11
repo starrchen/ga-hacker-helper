@@ -154,9 +154,13 @@ footer{
 }
 
 .submit:hover{
-  background-color: #911414;
+  background-color: #2F2F72;
 }
 
 .delete{
+  background-color: #911414;
+}
+
+.delete:hover{
   background-color: #911414;
 }
