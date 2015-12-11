@@ -35,14 +35,17 @@
 </div>
 </div>
 <!-- Topic Delete -->
+<div class='section'>
 <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
   <input type="hidden" name="_method" value="DELETE"/>
   <button class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
     <i class="material-icons right">delete</i>
   </button>
 </form>
+</div>
 <!-- add link -->
-<div id="new-link" class="col s3">
+<div class='container'>
+<div id="new-link" class="col s3 section center">
   <h3>New Link</h3>
   <form action="/topics/{{topic._id}}/links" method="post">
     <div class='section input-field'>
@@ -71,4 +74,5 @@
       </button>
     </div>
   </form>
+</div>
 </div>
