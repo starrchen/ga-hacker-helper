@@ -26,9 +26,9 @@ $(document).ready(function() {
         for(i = 0; i < response.topics[topicId].links.length; i++) {
           console.log(response.topics._id);
           console.log(response.topics[topicId].links[i].url);
-          linksArray[i] = ("<li><a class='ajaxlinks' href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
+          linksArray[i] = ("<li><a class='collection-item ajaxlinks' href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
         }
-        var linksUL = $("<ul>").append(linksArray);
+        var linksUL = $("<ul class='collection'>").append(linksArray);
         $('#'+topicId).append(linksUL);
       }
     })
