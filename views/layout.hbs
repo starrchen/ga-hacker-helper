@@ -53,7 +53,7 @@
     <li><a href="/">Home</i></a></li>
     <li><a href="/ajax">One Pager</i></a></li>
     {{#if currentUser}}
-    <li><a href="/logout">Logout</a></li<a>
+    <li><a href="/logout">Logout</a></li>
       {{else}}
       <li><a href="/login">Login</a></li>
       <li><a href="/signup">Signup</a></li>
@@ -65,7 +65,7 @@
           <div class="collapsible-body">
             <ul>
               {{#each topics}}
-              <li><a href="/topics/{{id}}">{{name}}</a><li>
+              <li><a href="/topics/{{id}}">{{name}}</a></li>
               {{/each}}
             </ul>
           </div>

@@ -145,3 +145,8 @@ footer{
 .ajax-links {
   margin: 0px;
 }
+
+.extra-small {
+  height: 200px;
+  padding: 5px;
+}

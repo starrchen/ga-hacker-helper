@@ -6,68 +6,80 @@
 <div class='center'>
   <a href="/topics/{{topic.id}}/edit" class="white-text btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
     <i class="material-icons right">send</i></a>
-</div>
+  </div>
+  
+<div class='container section'>
+  <h4 class='center'>Links</h4>
 
-<div class='container'>
-  <div class="row section collection-item">
-    <h4 class='center'>Links</h4>
-    <ul>
-
-      <!-- Topic links -->
+    <!-- Topic links -->
+    <div class='row center'>
       {{#each topic.links}}
-      <li>
-        <div class='show-links brown lighten-3 col s6'><h5 class="link-title">{{title}}  <a target="_blank" href="{{url}}" class="secondary-content">
-          <i class="material-icons indigo-text text-darken-4">send</i></a></h5>
-          <p>{{summary}}</p>
-          <!-- link delete -->
-          <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}" onsubmit="return confirm('Are you sure you want to delete this link?')">
-            <input type="hidden" name="_method" value="DELETE" />
-            <button class="btn waves-effect waves-light" type="submit" name="action">
-              <i class="material-icons">delete</i>
-            </button>
-          </form>
+      <div class='col s6'>
+        <div class='z-depth-3 card extra-small brown lighten-3'>
+
+          <a target="_blank" href="{{url}}" class="secondary-content">
+            <i class="material-icons indigo-text center text-darken-4">send</i></a>
+              <h5 class="link-title">{{title}}</h5>
+
+              <p>{{summary}}</p>
+
+            <!-- link delete -->
+            <div class='card-action link-card-action'>
+              <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}" onsubmit="return confirm('Are you sure you want to delete this link?')">
+                <input type="hidden" name="_method" value="DELETE" />
+                <button class="btn waves-effect waves-light submit" type="submit" name="action">
+                  <i class="material-icons">delete</i>
+                </button>
+              </form>
+
+          </div>
+          </div>
         </div>
-      </li>
-      {{/each}}
-    </ul>
-  </div>
-
-  <!-- Topic Delete -->
-  <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
-    <input type="hidden" name="_method" value="DELETE"/>
-    <button id="delete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
-      <i class="material-icons right">delete</i>
-    </button>
-  </form>
-
-  <!-- add link -->
-
-
-  <div id="new-link" class="col s3">
-    <h3>New Link</h3>
-    <form action="/topics/{{topic._id}}/links" method="post">
-      <div class='section input-field'>
-        <input type="text" name="title" id='title' class="validate">
-        <label for="title">Title</label>
+        {{/each}}
       </div>
+    </div>
 
-      <div class='section input-field'>
-        <input type="text" name="url" id='url' class="validate">
-        <label for="url">URL</label>
-      </div>
-
-      <div class='section input-field'>
-        <input type="text" name="summary" id='summary' class="validate">
-        <label for="summary">Summary</label>
-      </div>
-
-      <div class='section input-field'>
-        <input type="text" name="source" id='source' class="validate">
-        <label for="source">Source</label>
-      </div>
-
-      
-      <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons left">add</i> Add this link</button>
+    <!-- Topic Delete -->
+    <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
+      <input type="hidden" name="_method" value="DELETE"/>
+      <button class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
+        <i class="material-icons right">delete</i>
+      </button>
     </form>
+
+    <!-- add link -->
+
+
+    <div id="new-link" class="col s3">
+      <h3>New Link</h3>
+      <form action="/topics/{{topic._id}}/links" method="post">
+        <div class='section input-field'>
+          <input type="text" name="title" id='title' class="validate">
+          <label for="title">Title</label>
+        </div>
+
+        <div class='section input-field'>
+          <input type="text" name="url" id='url' class="validate">
+          <label for="url">URL</label>
+        </div>
+
+        <div class='section input-field'>
+          <input type="text" name="summary" id='summary' class="validate">
+          <label for="summary">Summary</label>
+        </div>
+
+        <div class='section input-field'>
+          <input type="text" name="source" id='source' class="validate">
+          <label for="source">Source</label>
+        </div>
+
+        <div class='center'>
+          <button class="btn submit waves-effect waves-light" type="submit" name="action">Add This Link
+            <i class="material-icons right">add</i>
+          </button>
+        </div>
+      </form>
+
+
+    </div>
   </div>
-</div>
