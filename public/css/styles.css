@@ -90,7 +90,7 @@ p.flow-text {
 
 }
 
-.link-new{
+.new-link{
   background-color: tomato;
 }
 
@@ -104,10 +104,6 @@ footer{
   font-size: small;
 }
 
-#edelete-topic{
-  display: inline;
-}
-
-.add-topic{
+.add-link{
   margin-top: 10px;
 }

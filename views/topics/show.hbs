@@ -4,17 +4,9 @@
 
 <!-- Topic Edit -->
 <div class='center'>
-  <a href="/topics/{{topic.id}}/edit" class='white-text'><button id="edelete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
-    <i class="material-icons right">send</i>
-  </button></a>
+  <a href="/topics/{{topic.id}}/edit" class="white-text btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
+    <i class="material-icons right">send</i></a>
 </div>
-<!-- Topic Delete -->
-<form method="post" class='deleteTopic center' action="/topics/{{topic.id}}">
-  <input type="hidden" name="_method" value="DELETE" />
-  <button id="edelete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
-    <i class="material-icons right">delete</i>
-  </button>
-</form>
 
 <div class='container'>
   <div class="row section collection-item">
@@ -40,8 +32,16 @@
     </ul>
   </div>
 
+  <!-- Topic Delete -->
+  <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <button id="delete-topic" class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
+      <i class="material-icons right">delete</i>
+    </button>
+  </form>
+
   <!-- add link -->
-  <div id="link-new" class="col s3">
+  <div id="new-link" class="col s3">
     <h3>New Link</h3>
     <form action="/topics/{{topic._id}}/links" method="post">
       <label>Title</label>

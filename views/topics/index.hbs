@@ -3,34 +3,35 @@
 </div>
 {{#each topics}}
 <div class='container' id='topicContainer'>
-  <div class="row">
-    <div class="col s12">
-      <div class="card activator" id='topicCard'>
-        <div id='color-one' class='center'>
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class='card-image activator responsive-img ' src="{{imageUrl}}">
-          </div>
-          <div class='card-content topic-description activator'>
-            <p class="card-title white-text text-darken-4" id='topicName'>{{name}}: </p>
-            <p class='indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
-          </div>
-        </div>
-        <div class="card-reveal  brown lighten-4 collection">
 
-          <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+  <div class="row col s12 card activator" id="topicCard">
+    <div id='color-one' class='center'>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class='card-image activator responsive-img ' src="{{imageUrl}}">
+      </div>
+      <div class='card-content topic-description activator'>
+        <a class="card-title white-text text-darken-4" id='topicName' href="/topics/{{_id}}">{{name}}: </a>
+        <p class='indigo-text text-lighten-4' id='topicDescription'>{{description}}</p></br>
+      </div>
+    </div>
 
-            {{#each links}}
-            <a href="{{url}}" class="indigo-text text-darken-4 collection-item">
-              <strong>{{title}}: </strong>
-                {{summary}}</a>
-            {{/each}}
-          </ul>
-          <div class='center add-topic'>
-            <a href="/topics/{{_id}}" class="btn submit waves-effect waves-light" type="submit" name="action">Add Resource</a>
-          </div>
-        </div>
+    <div class="card-reveal  brown lighten-4 collection">
+
+      <span class="card-title center grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+      {{#each links}}
+      <a href="{{url}}" class="indigo-text text-darken-4 collection-item">
+        <strong>{{title}}: </strong>
+        {{summary}}</a>
+        {{/each}}
+      </ul>
+
+      <div class='center add-link'>
+        <a href="/topics/{{_id}}#new-link" class="btn submit waves-effect waves-light" type="submit" name="action">Add Link <i class="right material-icons">add</i></a>
+        <a href="/topics/{{_id}}" class="btn submit waves-effect waves-light" type="submit" name="action" id="view-topic">View Topic<i class="right material-icons">call_made</i></a>
       </div>
     </div>
   </div>
+
 </div>
+
 {{/each}}
