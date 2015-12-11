@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var url = "http://localhost:4000/topics.json"
+  var url = "/topics.json"
   var request = $.ajax({
     url: url,
     type: "GET",
