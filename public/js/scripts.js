@@ -28,7 +28,7 @@ $(document).ready(function() {
           console.log(response.topics[topicId].links[i].url);
           linksArray[i] = ("<li><a class='collection-item ajaxlinks' href='" + response.topics[topicId].links[i].url + "'>" + response.topics[topicId].links[i].url + '</a>');
         }
-        var linksUL = $("<ul class='collection'>").append(linksArray);
+        var linksUL = $("<ul class='collection ajax-links'>").append(linksArray);
         $('#'+topicId).append(linksUL);
       }
     })
