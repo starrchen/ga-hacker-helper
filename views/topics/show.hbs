@@ -5,10 +5,10 @@
 </div>
 <!-- Topic Edit -->
 <div class='center section'>
-  <a href="/topics/{{topic.id}}/edit" class="white-text btn submit waves-effect waves-light" type="submit" name="action">Edit Topic
+  <a href="/topics/{{topic.id}}/edit" class="white-text btn submit hoverable" type="submit" name="action">Edit Topic
     <i class="material-icons right">send</i></a>
   </div>
-  
+
   <!-- links -->
   <div class='container section'>
     <h4 class='center'>Links</h4>
@@ -25,7 +25,7 @@
             <div class='card-action link-card-action'>
               <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}" onsubmit="return confirm('Are you sure you want to delete this link?')">
                 <input type="hidden" name="_method" value="DELETE" />
-                <button class="btn waves-effect waves-light submit" type="submit" name="action">
+                <button class="btn hoverable submit" type="submit" name="action">
                   <i class="material-icons">delete</i>
                 </button>
               </form>
@@ -39,7 +39,7 @@
     <div class='section'>
       <form method="post" class='center' action="/topics/{{topic.id}}" onsubmit="return confirm('Are you sure you want to delete this topic and all of its links?')">
         <input type="hidden" name="_method" value="DELETE"/>
-        <button class="btn submit waves-effect waves-light" type="submit" name="action">Delete topic
+        <button class="btn submit hoverable" type="submit" name="action">Delete topic
           <i class="material-icons right">delete</i>
         </button>
       </form>
@@ -70,7 +70,7 @@
           </div>
           <!-- add link -->
           <div class='center'>
-            <button class="btn submit waves-effect waves-light" type="submit" name="action">Add This Link
+            <button class="btn submit hoverable" type="submit" name="action">Add This Link
               <i class="material-icons right">add</i>
             </button>
           </div>

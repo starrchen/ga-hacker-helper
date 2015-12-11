@@ -152,3 +152,7 @@ footer{
   height: 200px;
   padding: 5px;
 }
+
+.submit:hover{
+  background-color: #2F2F72;
+}
