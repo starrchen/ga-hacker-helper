@@ -11,8 +11,6 @@ var LinkSchema = new Schema({
   summary: String,
   url: String,
   source: String
-  // topic: [TopicSchema]
-  // topic_id: foreign_key
 });
 
 // defining schema for authors.

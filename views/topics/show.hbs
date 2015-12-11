@@ -15,8 +15,8 @@
       <!-- Topic links -->
       {{#each topic.links}}
       <li>
-        <div class='show-links brown lighten-3 col s6'><h5 class="link-title">{{title}}  <a target="_blank" href="{{url}}" class="secondary-content">
-          <i class="material-icons indigo-text text-darken-4">send</i></a></h5>
+        <div class='show-links brown lighten-3 col s6'><h5 class="link-title brown-text"><a target="_blank" href="{{url}}">{{title}}
+        </a></h5>
           <p>{{summary}}</p>
           <!-- link delete -->
           <form method="post" class='center' action="/topics/{{../topic._id}}/links/{{id}}" onsubmit="return confirm('Are you sure you want to delete this link?')">
@@ -65,7 +65,7 @@
         <label for="source">Source</label>
       </div>
 
-      
+
       <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons left">add</i> Add this link</button>
     </form>
   </div>

@@ -87,7 +87,11 @@ p.flow-text {
 
 .link-title {
   text-align: center;
+}
 
+.link-title a{
+  color: black;
+  text-decoration: underline;
 }
 
 .new-link{
