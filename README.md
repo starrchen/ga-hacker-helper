@@ -24,7 +24,7 @@ $ nodemon app.js
 
 Checkout out some [user stories](https://github.com/starrchen/ga-hacker-helper/blob/master/planning/user_stories.md] to check out the thought process behind feature implementation.)
 
-Also available for viewing are some [initial wireframes](https://github.com/starrchen/ga-hacker-helper/blob/master/planning/wireframes.jpg) from our preliminary planning for the design of the app.
+Also available for viewing are some [initial](https://github.com/starrchen/ga-hacker-helper/blob/master/planning/wireframes-initial.jpg)  [wireframes](https://github.com/starrchen/ga-hacker-helper/blob/master/planning/wireframes.jpg) from our preliminary planning for the design of the app.
 (Note: Our working title was "GA-Lossary").
 
 The logic flow can be found on the [ERD](https://github.com/starrchen/ga-hacker-helper/blob/master/planning/ERD.png), which included a model for a future feature (see below) - comments.
