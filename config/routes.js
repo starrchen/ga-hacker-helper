@@ -48,9 +48,6 @@ router.post("/topics/:id/links", topicsController.addlink);
 router.delete("/topics/:topicId/links/:id", topicsController.removelink);
 
 
-// AJAX routes
-router.get("/ajax", topicsController.ajax);
-
 
 
 
