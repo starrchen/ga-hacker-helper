@@ -43,7 +43,7 @@ Due to time constraints, we had to scale back the scope of our app and its featu
 ## Hindsight is 20/20...
 
 Given what we know now, here are a few things we might have done differently if we were to start over with the prompt:
-* Speding more time reviewing/learning MEAN stack implementation _(vs. bludgeoning through it and learning the hard way)_
+* Spending more time reviewing/learning MEAN stack implementation _(vs. bludgeoning through it and learning the hard way)_
 * Starting client-side requests earlier _(vs. starting with them at the get-go and having to restart with server-side requests)_
 * Clarifying actual project requirements _(vs. not being sure and getting a lot of vague answers, so perhaps adding unnecessary constraints)_
 * Developing a more Node.js-y app _(vs. what is essentially a Rails app on Node.js)_
