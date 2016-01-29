@@ -4,12 +4,19 @@ $(document).ready(function() {
     url: url,
     type: "GET",
     dataType: "json"
-  }).done(function(response){
+  }).done(function(response) {
     var allTopics = [];
-    for (var i = 0; i < response.topics.length; i++){
+    response.topics.sort(function(a, b) {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    })
+    for (var i = 0; i < response.topics.length; i++) {
       console.log(response.topics[i].name);
-      $(".all-topics").append("<div class='topic' id='"+i+"'><h2 class='topicHeader'>" + response.topics[i].name + "</h2></div>");
+
+      $(".all-topics").append("<div class='topic' id='" + i + "'><h2 class='topicHeader'>" + response.topics[i].name + "</h2></div>");
     }
+
 
     $(".topicHeader").on("click", function() {
       console.log("clicked");
