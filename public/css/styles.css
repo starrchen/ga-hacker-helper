@@ -2,14 +2,10 @@ body {
   background-color: #CEB9A2;
   position: relative;
 }
-
+/*Hacker Helper header image*/
 #index-banner {
   background-image: url("../images/headerImage.jpg");
   height: 5%;
-}
-h1.header ,
-h5.header {
-  color: white;
 }
 
 
